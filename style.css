@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(210, 46%, 95%);
+}
+
+.main_container {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.left {
+    background: url(/images/drawers.jpg) no-repeat;
+    background-size: cover;
+    flex-basis: 41%;
+    border-radius: 10px 0 0 10px;
+    height: auto;
+}
+
+.right {
+    padding: 2.5rem 2.3rem 2rem 3rem;
+    flex-basis: 59%;
+    background-color: #fff;
+    border-radius: 0 10px 10px 0;
+}
+
+.right h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: hsl(217, 19%, 35%);
+    max-width: 420px;
+}
+
+.paragraph {
+    text-align: justify;
+    font-weight: 500;
+    font-size: .85rem;
+    color: hsl(214, 17%, 51%);
+    margin-top: 1.5rem;
+    max-width: 400px;
+    line-height: 1.3rem;
+}
+
+.author_container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.author {
+    display: flex;
+    gap: 1rem;
+}
+
+.avatar {
+    display: block;
+    max-width: 45px;
+    border-radius: 50%;
+}
+
+.author_name h4 {
+    color: hsl(217, 19%, 35%);
+}
+
+.author_name p {
+    font-weight: 500;
+    color: hsl(212, 23%, 69%);
+}
+
+#shareBtn {
+    cursor: pointer;
+    border: none;
+    padding: .6rem;
+    border-radius: 50%;
+    color: #6d7f97;
+    background-color: hsl(210, 46%, 95%);
+}
+
+#shareBtn:hover {
+    color: #fff;
+    background-color: hsl(214, 17%, 51%);
+}
+
+.fa-solid {
+    font-size: .95rem;
+}
+
+.share_content {
+    position: absolute;
+    top: -65px;
+    right: -100px;
+    padding: .9rem 2rem .6rem 2rem;
+    border-radius: 12px;
+    background-color: hsl(217, 19%, 35%);
+    box-shadow: 0 10px 8px hsl(210, 46%, 95%);
+}
+
+
+.share_content::before {
+    position: absolute;
+    content: '';
+    right: 44%;
+    bottom: -12px;
+    width: 30px;
+    height: 13px;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    background-color: hsl(217, 19%, 35%);
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.share_content a:first-child {
+    text-decoration: none;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    color: hsl(212, 23%, 69%);
+}
+
+.share_image {
+    max-width: 100%;
+}
+
+@media (max-width: 799px) {
+    .main_container {
+        padding: 5rem 0;
+        max-width: 450px;
+        flex-direction: column;
+    }
+
+    .left {
+        flex-basis: auto;
+        height: 300px;
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+@media (max-width: 460px) {
+    .main_container {
+        max-width: 350px;
+    }
+}
